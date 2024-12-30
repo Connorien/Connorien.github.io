@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background-color: #85B37E;
+}
+
+.circle-button {
+    width: 120px;
+    height: 120px;
+    background-color: #D3B8E2;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 18px;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.circle-button:hover {
+    background-color: #97AED6;
+    transform: scale(1.1);
+    box-shadow: #97AED6;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.circle-button:active {
+    transform: scale(0.95);
+}
+
+.circle-button::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: calc(100% + 20px);
+    height: calc(100% + 20px);
+    background-color: #97AED6;
+    border-radius: 50%;
+    z-index: -1;
+    transition: all 0.5s ease;
+}
+
+.circle-button:hover::before {
+    top: -20px;
+    left: -20px;
+    width: calc(100% + 40px);
+    height: calc(100% + 40px);
+}
+
+.circle-button:active::before {
+    top: -5px;
+    left: -5px;
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+}
+
+
+    </style>
+
+</head>
+<body>
+    <a href="dist/index.html" class="circle-button">Click Me</a>
+
+</body>
+</html>
